@@ -6,12 +6,6 @@
 @import './assets/styles/utils/variables';
 
 @import './assets/styles/layout/forms';
+@import './assets/styles/layout/table';
 @import './assets/styles/components/button';
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-table, th, td {
-  border: 1px solid;
-}

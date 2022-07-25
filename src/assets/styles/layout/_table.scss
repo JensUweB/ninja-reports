@@ -1,0 +1,18 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid;
+}
+.row {
+  &--highlight {
+    background-color: $colorRowHighlight;
+    font-weight: bold;
+  }
+
+  &--total {
+    font-weight: bold;
+    background-color: $colorSecondary;
+  }
+}

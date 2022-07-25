@@ -1,0 +1,12 @@
+{
+  "incomeStatement": {
+    "title": "Einnahmenüberschussrechnung",
+    "docNumber": "Beleg-Nr.",
+    "date": "Datum",
+    "description": "Beschreibung",
+    "sum": "Summe",
+    "sumIncome": "Betriebseinnahmen als umsatzsteuerlicher Kleinunternehmer (nach § 19 Abs. 1 UStG)",
+    "sumExpenses": "Summe Betriebsausgaben",
+    "total": "Gewinn/Verlust"
+  }
+}

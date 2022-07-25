@@ -1,0 +1,29 @@
+<h1>{{ "incomeStatement.title" | translate }}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">{{ "incomeStatement.description" | translate }}</th>
+      <th scope="col">{{ "incomeStatement.sum" | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ "incomeStatement.sumIncome" | translate }}</td>
+      <td>{{ invoicesTotal$ | async | number: "1.2-2" }}</td>
+    </tr>
+    <ng-container *ngIf="expenses$ | async as expenses">
+      <tr *ngFor="let expense of expenses">
+        <td>{{ expense.category?.name }}</td>
+        <td>{{ expense.amount | number: "1.2-2" }}</td>
+      </tr>
+    </ng-container>
+    <tr class="row--highlight">
+      <td>{{ "incomeStatement.sumExpenses" | translate }}</td>
+      <td>{{ expensesTotal$ | async | number: "1.2-2" }}</td>
+    </tr>
+    <tr class="row--total">
+      <td>{{ "incomeStatement.total" | translate }}</td>
+      <td>{{ total$ | async | number: "1.2-2" }}</td>
+    </tr>
+  </tbody>
+</table>
