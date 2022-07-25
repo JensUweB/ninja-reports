@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,7 +33,7 @@ import { effects } from './store/effects';
     EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument({ maxAge: 5 }),
   ],
-  providers: [ApiService, ExpenseCategoryPipe],
+  providers: [ApiService, ExpenseCategoryPipe, AsyncPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
