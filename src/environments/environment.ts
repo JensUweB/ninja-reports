@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiToken: 'TKL2eQDoHXc0mrBdewteIZrbaUIfM5U63AekQ1LAl7Oxn6tCgUlC3Ql0TbyQiknv',
+  ninjaApi: {
+    invoices: '/api/v1/invoices',
+    expenses: '/api/v1/expenses',
+    expensesCategories: '/api/v1/expense_categories',
+  },
 };
 
 /*

@@ -1,0 +1,45 @@
+<h2>Invoices</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Invoice #</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="invoices$ | async as invoices">
+    <tr *ngFor="let invoice of invoices">
+      <td>{{ invoice.number }}</td>
+      <td>{{ invoice.public_notes }}</td>
+      <td>{{ invoice.date | date: "dd.MMM.yyyy" }}</td>
+      <td>{{ invoice.amount }}</td>
+      <td>{{ invoice.balance }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Expenses</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Expense #</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="expenses$ | async as expenses">
+    <tr *ngFor="let invoice of expenses">
+      <td>{{ invoice.number }}</td>
+      <td>{{ invoice.public_notes }}</td>
+      <td>{{ invoice.category_id | expenseCategory: (categories$ | async) }}</td>
+      <td>{{ invoice.date | date: "dd.MMM.yyyy" }}</td>
+      <td>{{ invoice.amount }}</td>
+      <td>{{ invoice.balance }}</td>
+    </tr>
+  </tbody>
+</table>

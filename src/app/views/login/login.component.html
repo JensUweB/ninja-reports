@@ -1,0 +1,27 @@
+<fieldset>
+  <div class="form-group">
+    <label for="apiUrl">Invoice Ninja URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="apiUrl"
+      placeholder="https://invoice.ninja.tld"
+      [(ngModel)]="apiUrl"
+    />
+  </div>
+  <div class="form-group">
+    <label for="apiUrl">API Token</label>
+    <input
+      type="text"
+      class="form-control"
+      id="apiUrl"
+      placeholder="your-secret-api-token"
+      [(ngModel)]="apiToken"
+    />
+  </div>
+  <div class="form-group">
+    <div class="buttons">
+      <button class="btn btn-primary" (click)="start()">Start</button>
+    </div>
+  </div>
+</fieldset>

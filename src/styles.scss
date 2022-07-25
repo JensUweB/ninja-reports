@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './assets/styles/utils/variables';
+
+@import './assets/styles/layout/forms';
+@import './assets/styles/components/button';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid;
+}
